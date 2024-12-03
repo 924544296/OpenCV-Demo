@@ -6,6 +6,7 @@
 #include "mainwindow_4.h"
 #include "mainwindow_5.h"
 #include "mainwindow_6.h"
+#include "mainwindow_7.h"
 
 
 Form::Form(QWidget *parent) :
@@ -20,6 +21,7 @@ Form::Form(QWidget *parent) :
     ui->comboBox->addItem("摄像头");
     ui->comboBox->addItem("超分辨率");
     ui->comboBox->addItem("视频");
+    ui->comboBox->addItem("X光图像估算物体重量");
 }
 
 Form::~Form()
@@ -64,6 +66,12 @@ void Form::on_pushButton_clicked()
     case 5:
     {
         MainWindow_6 *w = new MainWindow_6(this);
+        w->show();
+        break;
+    }
+    case 6:
+    {
+        MainWindow_7 *w = new MainWindow_7(this);
         w->show();
         break;
     }
